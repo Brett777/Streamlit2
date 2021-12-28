@@ -11,6 +11,6 @@ myCard = pk.Card.where(q='name:' + str(cardName) + ' number:' + str(cardNumber))
 c = CurrencyRates()
 exchangeRate = c.get_rate('EUR', 'CAD')
 
+st.image(myCard[0].images.small)
 
-st.write("This is a Pokemon Card")
-st.write("It is worth: " +str(int(myCard[0].cardmarket.prices.averageSellPrice)*exchangeRate))
+st.write("$" +str(int(myCard[0].cardmarket.prices.averageSellPrice)*exchangeRate))
