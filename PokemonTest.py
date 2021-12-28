@@ -16,8 +16,8 @@ try:
     if submit_button:
         myCard = pk.Card.where(q='name:' + str(cardName) + ' number:' + str(cardNumber))
         st.image(myCard[0].images.large)
-        avg30 = round(int(myCard[0].cardmarket.prices.avg30*1.4502,2))
-        avgAll = round(int(myCard[0].cardmarket.prices.averageSellPrice) * 1.4502, 2)
+        avg30 = round(myCard[0].cardmarket.prices.avg30*1.4502,2)
+        avgAll = round(myCard[0].cardmarket.prices.averageSellPrice * 1.4502, 2)
         st.metric(label = "30 Day Average  $", value = avg30, delta = avg30 -avgAll)
         st.metric(label="Alltime Average $", value=avgAll)
         st.subheader(str(myCard[0].rarity))
