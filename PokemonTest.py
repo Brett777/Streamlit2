@@ -21,6 +21,6 @@ try:
         st.metric(label = "30 Day Average", value = "$"+str(avg30), delta = "$"+str(round(avg30 -avgAll,2)))
         st.metric(label="Alltime Average", value="$"+str(avgAll))
         st.subheader("Rarity")
-        st.caption(str(myCard[0].rarity))
+        st.text(str(myCard[0].rarity))
 except:
     st.write("Enter a card name and number.")
