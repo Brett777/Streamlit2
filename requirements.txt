@@ -1,1 +1,2 @@
 pokemontcgsdk
+forex-python
