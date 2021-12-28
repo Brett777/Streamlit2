@@ -18,6 +18,7 @@ try:
         st.image(myCard[0].images.large)
         avg30 = round(myCard[0].cardmarket.prices.avg30*1.4502,2)
         avgAll = round(myCard[0].cardmarket.prices.averageSellPrice * 1.4502, 2)
+        st.subheader("Card Value in Canadian Dollars")
         st.metric(label = "30 Day Average", value = "$"+str(avg30), delta = "$"+str(round(avg30 -avgAll,2)))
         st.metric(label="Alltime Average", value="$"+str(avgAll))
         st.subheader("Rarity")
