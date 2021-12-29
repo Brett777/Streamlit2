@@ -15,7 +15,6 @@ try:
 
     if submit_button:
         myCard = pk.Card.where(q='name:' + str(cardName) + ' number:' + str(cardNumber))
-        myCard = pk.Card.where(q='name:' + str(cardName))
         st.image(myCard[0].images.large)
         avg30 = round(myCard[0].cardmarket.prices.avg30*1.4502,2)
         avgAll = round(myCard[0].cardmarket.prices.averageSellPrice * 1.4502, 2)
