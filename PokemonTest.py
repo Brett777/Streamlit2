@@ -1,6 +1,5 @@
 import pokemontcgsdk as pk
 import streamlit as st
-from forex_python.converter import CurrencyRates
 
 pk.RestClient.configure('21b4e399-5973-4bf5-b9be-009df2d6b396')
 
